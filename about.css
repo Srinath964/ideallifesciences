@@ -1,0 +1,108 @@
+/* Reset & Base */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #f9f9f9, #e6f2f2);
+}
+
+.about-hero{
+    background-image: url('./images/Gemini.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: no-repeat;
+    height: 250px;
+}
+ 
+/* Style the nav container */
+.mainNav {
+  width: 100%;
+  background: #ffffffcc; /* semi-white background */
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  backdrop-filter: blur(6px);
+}
+
+/* Remove default UL styles */
+.nav-links-about {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 15px 30px;
+  gap: 10px;
+}
+
+/* Style each link */
+.nav-links-about a {
+  text-decoration: none;
+  color: #0b3b49;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links-about a:hover {
+  color: #0ea5a5; /* teal hover */
+}
+
+/* Highlight current page */
+.nav-links-about a.active {
+  border-bottom: 2px solid #0ea5a5;
+}
+/* add slash automatically between items */
+.nav-links-about li:not(:last-child)::after {
+  content: "/";
+  margin-left: .5rem;
+  color: #555;
+}
+
+
+
+
+
+
+
+/* dropdown style */
+.dropdown-products {
+    position: relative;
+}
+
+
+/* Dropdown menu (hidden by default) */
+.dropdown-content {
+
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%; /* below Products link */
+  /* left: 0; */
+  background: #fff;
+  min-width: 150px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border-radius: 6px;
+  padding: 10px;
+  z-index: 999;
+}
+
+.dropdown-content li {
+  width: 100%;
+}
+/* Dropdown items */
+.dropdown-content a {
+    
+  display: block;
+  padding: 8px;
+  color: #0b3b49;
+  text-decoration: none;
+}
+
+.dropdown-content li:hover {
+
+  background: #d1dfdf;
+  color: #0ea5a5;
+}
+
+
+/* Show menu on hover */
+.dropdown-products:hover .dropdown-content {
+  display: block;
+}

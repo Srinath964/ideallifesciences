@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ideallifesciences</title>
+    
+    <!-- Preconnect to external domains for faster loading -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://code.jquery.com">
+    
+    <link rel="icon" href="./images/Ideal Logo 2024.webp" type="image/x-icon">
+    
+    <!-- Critical CSS - Load first -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Font Awesome - Single version only -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <!-- Slick CSS for product slider only -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />   -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"> -->
+
+    <!-- AOS CSS - Lazy load -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+<style>
+/* Hero Section */
+/* .product-hero {
+  height: 300px;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url("./images/slide2.png") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+} */
+:root {
+  --header-height: 115px;
+}
+/* Hero Section - Desktop & Tablet */
+.product-hero {
+  margin-top: 115px; /* height of topbar + navbar */
+  min-height: 400px;
+  height: 120vh; /* 50% of viewport height for responsiveness */
+  background: 
+  /* linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), */
+              url("./images/hero section/Regalia_Slide_hs1.webp") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+.hero-content {
+  background: rgba(0, 0, 0, 0.5); 
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  max-width: 800px;
+  padding: 20px;
+}
+.hero-content h1 {
+  color: 	white;
+  display: inline-block;
+  font-size: 42px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+  color: #eee;
+  font-size: 18px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+body{
+  margin-top: 135px;
+}  
+  .product-hero {
+      background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)),
+                url("./images/hero section/Regalia mob2.webp");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+      /* min-height: 400px; */
+      height: 100%;
+      padding: 30px 15px;
+  }
+  
+ .hero-content{
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+ }
+  .hero-content h1 {
+    font-size: 22px;
+  }
+  
+  .hero-content p {
+    font-size: 14px;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 480px) {
+  .product-hero {
+    min-height: 250px;
+    height: 35vh;
+  }
+  
+  .hero-content h1 {
+    font-size: 28px;
+  }
+  
+  .hero-content p {
+    font-size: 14px;
+  }
+}
+
+/* Product Section */
+.products {
+  padding: 60px 8%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  background: #f9f9f9;
+}
+
+/* Product Card */
+/* .product-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+} */
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.img-box {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.img-box img {
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+/* Zoom on hover */
+.product-card:hover img {
+  transform: scale(1.2);
+}
+
+.product-card h3 {
+  margin-top: 12px;
+  font-size: 18px;
+}
+
+/* Image Box */
+.img-box {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.img-box img {
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+/* Zoom Effect */
+.product-card:hover img {
+  transform: scale(1.15);
+}
+
+.product-card h3 {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #333;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+   .hero-content h1 {
+    font-size: 32px;
+  }
+}
+
+/* Image Zoom Modal */
+.img-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+}
+
+.img-modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.img-modal .close {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  color: #fff;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+</style>
+ 
+</head>
+<body>
+ <header class="header">
+          <!-- Top Bar Start -->
+        <div class="top-bar">
+          <div class="top-left">
+            <div class="top-item">
+              <!-- <span>Follow us:</span> -->
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="vertical-divider"></div>
+            <div class="top-item">
+              <a href="mailto:ideallifesciences@gmail.com">
+                <i class="fas fa-envelope"></i> ideallifesciences@gmail.com
+              </a>
+            </div>
+          </div>
+          <div class="top-right">
+            <div class="top-item">
+              <i class="fas fa-map-marker-alt"></i> Secunderabad, India
+            </div>
+            <div class="vertical-divider"></div>
+            <div class="top-item">
+              <i class="fas fa-phone-alt"></i> +91 98765 43210
+            </div>
+          </div>
+        </div>
+        <!-- Top Bar End -->
+
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo"><a href="index.html"></a><img src="./images/Ideal Logo 2024 (1).webp" alt=""></div>
+                <button class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+        
+                <li class="dropdown-products">
+                    <a href="#" class="dropdown-toggle" id="dropdown-toggle">Divisions ▾</a>
+                    <ul class="dropdown-content" id="dropdown-content">
+                        <li><a href="Regalia.html">Regalia</a></li>
+                        <li><a href="Hridaya.html">Hridaya</a></li>
+                        <li><a href="Crania.html">Crania</a></li>
+                    </ul>
+                </li>
+                    <li><a href="Gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+<!-- Hero Section -->
+  <!-- Hero Section -->
+    <!-- <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="fade-in">About Ideal Life Sciences</h1>
+                <p class="fade-in">Advancing Healthcare Through Excellence</p>
+            </div>
+        </div>
+    </section> -->
+ 
+     <!-- Hero Section -->
+<section class="product-hero">
+  <div class="hero-content">
+    <h1>Our Products</h1>
+    <p>Quality Medicines for a Better Life</p>
+  </div>
+</section>
+ 
+
+ <div class="mainNav">
+      <ul class="nav-links-about">
+        <li><a href="index.html" data-nav="home">Home</a></li>
+        <li><a href="Regalia.html" data-nav="regalia">Regalia</a></li>
+      </ul>
+    </div>
+    
+      <script>
+  (function () {
+    const page = document.body.classList.contains('regalia') ? 'regalia' : 'home';
+    document.querySelectorAll('[data-nav]').forEach(a => {
+      if (a.getAttribute('data-nav') === page) {
+        a.classList.add('active');
+      }
+    });
+  })();
+</script>
+
+
+
+<!-- Product Grid -->
+<section class="products">
+  <!-- <div class="product-card">
+    <div class="img-box">
+      <img src="./images/PNG/1.png" alt="Product 1">
+    </div>
+
+    <h3 class="product-name">Product Name 3</h3>
+    <p class="product-molecule">Molecule: Paracetamol 650 mg</p>
+  </div> -->
+
+
+  <div class="product-card">
+    <div class="img-box">
+      <img src="./images/PNG/Regalia/1.webp" alt="ambutril 60ml" loading="lazy">
+    </div>
+    <h3>Ambutril 60ml</h3>
+    <p></p>
+  </div>
+
+  <div class="product-card">
+    <div class="img-box">
+      <img src="./images/PNG/Regalia/2.webp" alt="ambutril 100ml" loading="lazy">
+    </div>
+    <h3>Ambutril 100ml</h3>
+  </div>
+<!-- 
+  <div class="product-card">
+    <div class="img-box">
+      <img src="./images/PNG/Regalia/3.webp" alt="ambutril Dx 60ml" loading="lazy">
+    </div>
+    <h3>Ambutril Dx 60ml</h3>
+  </div>
+
+  <div class="product-card">
+    <div class="img-box">
+      <img src="./images/PNG/Regalia/4.webp" alt="ambutril Dx 100ml" loading="lazy">
+    </div>
+    <h3>Ambutril Dx 100ml</h3>
+  </div> -->
+
+   <div class="product-card">
+    <div class="img-box">
+      <img src="./images/PNG/Regalia/5.webp" alt="Bactopod 100" loading="lazy">
+    </div>
+    <h3>Bactopod 100 Tab</h3>
+  </div>
+
+  <div class="product-card">
+      <div class="img-box">
+        <img src="./images/PNG/Regalia/6.webp" alt="Bactopod 200 Tab" loading="lazy">
+      </div>
+      <h3>Bactopod 200 Tab</h3>
+  </div>
+
+  <div class="product-card">
+    <div class="img-box">
+      <img src="./images/PNG/Regalia/7.webp" alt="Bactopod CV 200 Tab  " loading="lazy">
+    </div>
+    <h3>Bactopod CV 200 Tab</h3>
+  </div>
+
+  <div class="product-card">
+    <div class="img-box">
+      <img src="./images/PNG/Regalia/8.webp" alt="Bactopod 50 Ds" loading="lazy">
+    </div>
+    <h3>Bactopod 50 Ds</h3>
+  </div>
+
+   <div class="product-card">
+    <div class="img-box">
+      <img src="./images/PNG/Regalia/9.webp" alt="Bactopod 100 Ds" loading="lazy">
+    </div>
+    <h3>Bactopod 100 Ds</h3>
+  </div>
+
+  <div class="product-card">
+    <div class="img-box">
+      <img src="./images/PNG/Regalia/10.webp" alt="Bc plus tab" loading="lazy">
+    </div>
+    <h3>Bc Plus Tab</h3>
+  </div>
+<!-- 
+  <div class="product-card">
+    <div class="img-box">
+      <img src="./images/PNG/Regalia/11.webp" alt="Bc plus Drops" loading="lazy">
+    </div>
+    <h3>Bc Plus Drops</h3>
+  </div> -->
+
+  <div class="product-card">
+    <div class="img-box">
+      <img src="./images/PNG/Regalia/12.webp" alt="Bc plus syp" loading="lazy">
+    </div>
+    <h3>Bc Plus Syp</h3>
+  </div>
+
+    <div class="product-card">
+    <div class="img-box">
+      <img src="./images/PNG/Regalia/13.webp" alt="Bc plus Syrup" loading="lazy">
+    </div>
+    <h3>Bilactum Inj</h3>
+  </div>
+
+  <div class="product-card">
+    <div class="img-box">
+      <img src="./images/PNG/Regalia/14.webp" alt="Ca-fast" loading="lazy">
+    </div>
+    <h3>Ca-fast</h3>
+  </div>
+
+  <div class="product-card">
+    <div class="img-box">
+      <img src="./images/PNG/Regalia/15.webp" alt="DRIVEBACT-228.8 KID TAB" loading="lazy">
+    </div>
+    <h3>Drivebact-228.8 KID TAB</h3>
+  </div>
+
+  <div class="product-card">
+    <div class="img-box">
+      <img src="./images/PNG/Regalia/16.webp" alt="DRIVEBACT-625MG TAB" loading="lazy">
+    </div>
+    <h3>Drivebact-625MG TAB</h3>
+  </div>
+
+  <div class="product-card">
+    <div class="img-box">
+      <img src="./images/PNG/Regalia/17.webp" alt="DRIVEBACT-457 30ml" loading="lazy">
+    </div>
+    <h3>Drivebact-457 30ml</h3>
+  </div>
+
+  <div class="product-card">
+    <div class="img-box">
+      <img src="./images/PNG/Regalia/18.webp" alt="DRIVEBACT-457 60ml" loading="lazy">
+    </div>
+    <h3>Drivebact-457 60ml</h3>
+  </div>
+
+  <div class="product-card">
+    <div class="img-box">
+      <img src="./images/PNG/Regalia/DV3 DROPS.webp" alt="DV3 DROPS" loading="lazy">
+    </div>
+    <h3>DV3 Drops</h3>
+  </div>
+
+  <div class="product-card">
+    <div class="img-box">
+      <img src="./images/PNG/Regalia/FRENOS.webp" alt="FRENOS" loading="lazy">
+    </div>
+    <h3>Frenos</h3>
+  </div>
+
+  <div class="product-card">
+    <div class="img-box">
+      <img src="./images/PNG/Regalia/FRENOS INHALANT CAPSULES.webp" alt="FRENOS INHALANT CAPSULES" loading="lazy">
+    </div>
+    <h3>Frenos Inhalant Capsules</h3>
+  </div>
+
+  <div class="product-card">
+    <div class="img-box">
+      <img src="./images/PNG/Regalia/GUSTOGEM SUSP.webp" alt="GUSTOGEM SUSP" loading="lazy">
+    </div>
+    <h3>Gustogem Susp 6*2*5ML</h3>
+  </div>
+  
+  <div class="product-card">
+      <div class="img-box">
+        <img src="./images/PNG/Regalia/Ideaz 250Mg Tab.webp" alt="Ideaz 250Mg Tab" loading="lazy">
+      </div>
+      <h3>Ideaz 250Mg Tab</h3>
+  </div>
+  
+    <div class="product-card">
+      <div class="img-box">
+        <img src="./images/PNG/Regalia/Ideaz 500Mg Tab.webp" alt="Ideaz 500Mg Tab" loading="lazy">
+      </div>
+      <h3>Ideaz 500Mg Tab</h3>
+  </div>
+  
+  <div class="product-card">
+      <div class="img-box">
+        <img src="./images/PNG/Regalia/Idecet Syp.webp" alt="Idecet Syp" loading="lazy">
+      </div>
+      <h3>Idecet Syp</h3>
+  </div>
+
+  <div class="product-card">
+      <div class="img-box">
+        <img src="./images/PNG/Regalia/Idecet Ax Tab.webp" alt="Idecet Ax Tab" loading="lazy">
+      </div>
+      <h3>Idecet Ax Tab</h3>
+  </div>
+
+  <div class="product-card">
+      <div class="img-box">
+        <img src="./images/PNG/Regalia/Idecet-Ax Suspension.webp" alt="Idecet Ax Suspension" loading="lazy">
+      </div>
+      <h3>Idecet Ax Suspension</h3>
+  </div>
+
+  <div class="product-card">
+      <div class="img-box">
+        <img src="./images/PNG/Regalia/Idecet-Lm Kidtab.webp" alt="Idecet Lm Kidtab" loading="lazy">
+      </div>
+      <h3>Idecet Lm Kidtab</h3>
+  </div>
+
+  <div class="product-card">
+      <div class="img-box">
+        <img src="./images/PNG/Regalia/Idecet-Lm Tab.webp" alt="Idecet Lm Tab" loading="lazy">
+      </div>
+      <h3>Idecet Lm Tab</h3>
+  </div>
+
+  <div class="product-card">
+      <div class="img-box">
+        <img src="./images/PNG/Regalia/Idefen Tab.webp" alt="Idefen Tab" loading="lazy">
+      </div>
+      <h3>Idefen Tab</h3>
+  </div>
+  
+  <div class="product-card">
+      <div class="img-box">
+        <img src="./images/PNG/Regalia/Idefen Gel.webp" alt="Idefen Gel" loading="lazy">
+      </div>
+      <h3>Idefen Gel</h3>
+  </div>
+
+    <div class="product-card">
+      <div class="img-box">
+        <img src="./images/PNG/Regalia/Idefer Xt Tab.webp" alt="Idefer Xt Tab">
+      </div>
+      <h3>Idefer Xt Tab</h3>
+  </div>
+  
+    <div class="product-card">
+      <div class="img-box">
+        <img src="./images/PNG/Regalia/Idefer-Xt Drops.webp" alt="Idefen Xt Drops" loading="lazy">
+      </div>
+      <h3>Idefen Xt Drops</h3>
+  </div>
+  
+  <div class="product-card">
+      <div class="img-box">
+        <img src="./images/PNG/Regalia/Idefer Xt Suspension.webp" alt="Idefen Xt Suspension" loading="lazy">
+      </div>
+      <h3>Idefen Xt Suspension</h3>
+  </div>
+
+   <div class="product-card">
+      <div class="img-box">
+        <img src="./images/PNG/Regalia/Idemol 650G Tab.webp" alt="Idemol 650G Tab" loading="lazy">
+      </div>
+      <h3>Idemol 650G Tab</h3>
+  </div>
+  
+   <div class="product-card">
+      <div class="img-box">
+        <img src="./images/PNG/Regalia/Idemol Drops.webp" alt="Idemol Drops" loading="lazy">
+      </div>
+      <h3>Idemol Drops</h3>
+  </div>
+
+   <div class="product-card">
+      <div class="img-box">
+        <img src="./images/PNG/Regalia/Idemol-120Mg Susp.webp" alt="Idemol 120Mg Suspension" loading="lazy">
+      </div>
+      <h3>Idemol 120Mg Suspension</h3>
+  </div>
+
+   <div class="product-card">
+      <div class="img-box">
+        <img src="./images/PNG/Regalia/Idemol-250Mg Susp.webp" alt="Idemol 250Mg Suspension" loading="lazy">
+      </div>
+      <h3>Idemol 250Mg Suspension</h3>
+  </div>
+
+   <div class="product-card">
+      <div class="img-box">
+        <img src="./images/PNG/Regalia/Idemol-500Mg Susp.webp" alt="Idemol 500Mg Suspension" loading="lazy">
+      </div>
+      <h3>Idemol 500Mg Suspension</h3>
+  </div>
+
+    <div class="product-card">
+      <div class="img-box">
+        <img src="./images/PNG/Regalia/Iderab 20Mg Tab.webp" alt="Iderab 20Mg Tab" loading="lazy">
+      </div>
+      <h3>Iderab 20Mg Tab</h3>
+  </div>
+
+  <div class="product-card">
+      <div class="img-box">
+        <img src="./images/PNG/Regalia/Iderab Plus Tab.webp" alt="Iderab Plus Tab" loading="lazy">
+      </div>
+      <h3>Iderab Plus Tab</h3>
+  </div>
+
+  <div class="product-card">
+      <div class="img-box">
+        <img src="./images/PNG/Regalia/Myocam Tab.webp" alt="Myocam Tab" loading="lazy">
+      </div>
+      <h3>Myocam Tab</h3>
+  </div>
+  
+  <div class="product-card">
+      <div class="img-box">
+        <img src="./images/PNG/Regalia/Pregamec Tab.webp" alt="Pregamec Tab" loading="lazy">
+      </div>
+      <h3>Pregamec Tab</h3>
+  </div>
+
+  <div class="product-card">
+      <div class="img-box">
+        <img src="./images/PNG/Regalia/Sregest 100 Mg Tab.webp" alt="Sregest 100 Mg Tab" loading="lazy  ">
+      </div>
+      <h3>Sregest 100 Mg Tab</h3>
+  </div>
+
+  <div class="product-card">
+      <div class="img-box">
+        <img src="./images/PNG/Regalia/Sregest 200 Mg Tab.webp" alt="Sregest 200 Mg Tab" loading="lazy">
+      </div>
+      <h3>Sregest 200 Mg Tab</h3>
+  </div>
+
+  <!-- <div class="product-card">
+      <div class="img-box">
+        <img src="./images/PNG/Regalia/Sregest 300 Mg Tab.webp" alt="Sregest 300 Mg Tab" loading="lazy">
+      </div>
+      <h3>Sregest 300 Mg Tab</h3>
+  </div>
+
+  <div class="product-card">
+      <div class="img-box">
+        <img src="./images/PNG/Regalia/Sregest 400 Mg Tab.webp" alt="Sregest 400 Mg Tab" loading="lazy">
+      </div>
+      <h3>Sregest 400 Mg Tab</h3>
+  </div> -->
+
+  <div class="product-card">
+      <div class="img-box">
+        <img src="./images/PNG/Regalia/U Setron.webp" alt="U Setron" loading="lazy">
+      </div>
+      <h3>U Setron</h3>
+  </div>
+
+</section>
+
+
+<!-- Image Zoom Modal -->
+<div class="img-modal" id="imgModal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImg">
+</div>
+
+<script>
+  const modal = document.getElementById("imgModal");
+  const modalImg = document.getElementById("modalImg");
+  const closeBtn = document.querySelector(".img-modal .close");
+
+  document.querySelectorAll(".product-card img").forEach(img => {
+    img.addEventListener("click", () => {
+      modal.style.display = "flex";
+      modalImg.src = img.src;
+    });
+  });
+
+  closeBtn.onclick = () => modal.style.display = "none";
+
+  modal.onclick = (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  };
+</script>
+
+<!-- Latest products section -->
+<section class="latestproducts">
+  
+  <h2 class="heading-with-icon-lps">
+    Our Latest Products
+    <div class="line-with-icon">
+      <span class="line"></span>
+      <i class="fas fa-briefcase-medical icon"></i>
+      <span class="line"></span>
+    </div>
+    <p class="jcc">Ideal Life Sciences Private Limited</p>
+  </h2>
+
+  <div class="swiper latestSwiper">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide">
+        <img src="./images/PRODUCTS/Ourlatestproducts/idetor Gold.webp" alt="Idetor Gold" loading="lazy">
+      </div>
+
+      <div class="swiper-slide">
+        <img src="./images/PRODUCTS/Ourlatestproducts/safepram.webp" alt="Safepram" loading="lazy">
+      </div>
+
+      <div class="swiper-slide">
+        <img src="./images/PRODUCTS/Ourlatestproducts/TCAD.webp" alt="TCAD" loading="lazy">
+      </div>
+
+      <div class="swiper-slide">
+        <img src="./images/PRODUCTS/Ourlatestproducts/N-dpin inj.webp" alt="N-dpin Injection" loading="lazy">
+      </div>
+
+      <div class="swiper-slide">
+        <img src="./images/PRODUCTS/Ourlatestproducts/Usetron.webp" alt="Usetron" loading="lazy">
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+<!-- 1. WhatsApp Chat Button (Sticky Floating) -->
+<a
+  href="https://wa.me/919876543210"
+  class="whatsapp-float"
+  target="_blank"
+  title="Chat with us on WhatsApp"
+>
+  <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp" />
+</a>
+
+<!-- 2. Back to Top Button -->
+
+<!-- <button id="backToTop" title="Go to top">↑</button>
+
+<script>
+  const backToTopBtn = document.getElementById("backToTop");
+
+  function handleScroll() {
+    backToTopBtn.style.display =
+      window.scrollY > 300 ? "block" : "none";
+  }
+
+  window.addEventListener("scroll", handleScroll, { passive: true });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script> -->
+
+<footer>
+  <div id="footer"></div>
+</footer>
+    <!-- fetch html doc -->
+<script>
+  function loadHTML(id, file) { 
+    fetch(file)
+    .then(res => res.text())
+    .then(data => document.getElementById(id).innerHTML = data);
+  }
+
+  loadHTML("footer", "footer.html");  
+</script>
+
+<!-- jQuery - Load early for Slick -->
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+<!-- our latest products -->
+<!-- Scripts -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script> -->
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const latestSwiper = new Swiper(".latestSwiper", {
+      loop: true,
+      speed: 800,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      slidesPerView: 4,
+      spaceBetween: 20,
+      breakpoints: {
+        1200: { slidesPerView: 4 },
+        768: { slidesPerView: 2 },
+        0: { slidesPerView: 1 }
+      }
+    });
+  });
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>

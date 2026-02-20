@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.footer {
+  /* background-color: #0c2340; */
+  /* background-color: #264653; */
+  background-color: #1a313a;
+  color: white;
+  padding: 40px 0px;  
+  font-family: 'Segoe UI', sans-serif;
+  /* text-align: center; */
+}
+.footer-logo {
+  /* width: 100px; */
+  height: 50px;
+  margin-bottom: 20px;
+}
+.footer-container {
+    width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+  /* max-width: 1200px; */
+  padding: 0 30px;
+  margin: auto;
+}
+
+.footer-section {
+  flex: 1 1 250px;
+  min-width: 250px;
+  /* width: 250px; */
+}
+.footer-section-quick-links {
+  flex: 1 1 200px;
+  min-width: 200px;  
+}
+.footer-section-quick-links h4{
+    color: #00bcd4;
+    margin-bottom: 10px;
+}
+.footer-section h3,
+.footer-section h4 {
+  color: #00bcd4;
+  margin-bottom: 10px;
+}
+
+.footer-section, .footer-section-quick-links, ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section, .footer-section-quick-links, ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section, .footer-section-quick-links, a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+.email-icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 8px;
+  filter: brightness(0) invert(1);
+}
+/* Social Icons Row */
+.footer-social {
+  margin: 30px auto 10px;
+    text-align: center;
+}
+
+.footer-social a {
+  display: inline-block;
+  margin: 0 12px;
+}
+
+.footer-social img.icon {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.2s ease;
+}
+
+.footer-social img.icon:hover {
+  transform: scale(1.2);
+}
+
+/* Divider */
+.footer-divider {
+  border-top: 1px solid #444;
+  margin: 20px auto;
+  max-width: 1200px;
+}
+
+/* Bottom Text */
+.footer-bottom {
+    text-align: center;
+  margin-top: 30px;
+  padding-top: 10px;
+  border-top: 1px solid #444;
+  font-size: 14px;
+}
+
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    /* padding: 0 16px; */
+    max-width: 100%; /* Prevent overflow */
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+
+  .footer-section,
+  .footer-section-quick-links {
+     min-width: unset; /* Fix horizontal scroll */
+     flex: 1 1 160px;
+  }
+
+  .footer-social {
+    text-align: center;
+    margin: 25px 0 10px;
+  }
+
+  .footer-social img.icon {
+    width: 28px;
+    height: 28px;
+    margin: 0 10px;
+  }
+
+  .footer-bottom {
+    font-size: 13px;
+    padding-top: 12px;
+  }
+  html, body {
+  overflow-x: hidden;
+}
+
+}
+
