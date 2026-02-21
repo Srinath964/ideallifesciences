@@ -75,9 +75,9 @@
                 <li class="dropdown-products">
                     <a href="#" class="dropdown-toggle" id="dropdown-toggle">Divisions ▾</a>
                     <ul class="dropdown-content" id="dropdown-content">
-                        <li><a href="Regalia.html">Regalia</a></li>
-                        <li><a href="Hridaya.html">Hridaya</a></li>
-                        <li><a href="Crania.html">Crania</a></li>
+                        <li><a href="regalia.html">Regalia</a></li>
+                        <li><a href="hridaya.html">Hridaya</a></li>
+                        <li><a href="crania.html">Crania</a></li>
                     </ul>
                 </li>
                     <li><a href="Gallery.html">Gallery</a></li>
@@ -191,7 +191,7 @@
     <div style="flex: 1 1 400px;">
       <h2 class="aboutus">About Us</h2>
       <p class="ideal">
-                Ideal Life Sciences is a research-oriented pharmaceutical company dedicated to developing, manufacturing, 
+        Ideal Life Sciences is a research-oriented pharmaceutical company dedicated to developing, manufacturing, 
         and distributing high-quality generic and branded medicines across therapeutic segments.
       </p>
       <p class="ideal">
@@ -363,6 +363,16 @@
 <footer>
   <div id="footer"></div>
 </footer>
+    <!-- fetch html doc -->
+<script>
+  function loadHTML(id, file) { 
+    fetch(file)
+    .then(res => res.text())
+    .then(data => document.getElementById(id).innerHTML = data);
+  }
+
+  loadHTML("footer", "footer.html");  
+</script>
 
   <!-- Carousel JavaScript -->
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>

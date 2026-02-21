@@ -302,9 +302,9 @@ body{
                 <li class="dropdown-products">
                     <a href="#" class="dropdown-toggle" id="dropdown-toggle">Divisions ▾</a>
                     <ul class="dropdown-content" id="dropdown-content">
-                        <li><a href="Regalia.html">Regalia</a></li>
-                        <li><a href="Hridaya.html">Hridaya</a></li>
-                        <li><a href="Crania.html">Crania</a></li>
+                        <li><a href="regalia.html">Regalia</a></li>
+                        <li><a href="hridaya.html">Hridaya</a></li>
+                        <li><a href="crania.html">Crania</a></li>
                     </ul>
                 </li>
                     <li><a href="Gallery.html">Gallery</a></li>
@@ -823,18 +823,6 @@ body{
 
 <button id="backToTop" title="Go to top">↑</button>
 
-<script>
-  const backToTopBtn = document.getElementById("backToTop");
-
-window.addEventListener("scroll", () => {
-  backToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
-});
-
-backToTopBtn.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
-</script>
-
 
 <footer>
   <div id="footer"></div>
@@ -852,27 +840,7 @@ backToTopBtn.addEventListener("click", () => {
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const latestSwiper = new Swiper(".latestSwiper", {
-      loop: true,
-      speed: 800,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      slidesPerView: 4,
-      spaceBetween: 20,
-      breakpoints: {
-        1200: { slidesPerView: 4 },
-        768: { slidesPerView: 2 },
-        0: { slidesPerView: 1 }
-      }
-    });
-  });
-</script>
-
-<script src="script.js"></script>
+<script src="script.js" defer></script>
 
 </body>
 </html>

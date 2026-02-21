@@ -1087,7 +1087,7 @@ h2 {
         position: relative;
         padding: 40px 20px;
         text-align: center;
-        background: url('./images/N&U.png') center/cover no-repeat;
+        background: url('./images/N&U.webp') center/cover no-repeat;
         color: white; /* text color for contrast */
         height: 550px;
       }
