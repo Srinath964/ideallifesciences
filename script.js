@@ -98,6 +98,40 @@ document.addEventListener("DOMContentLoaded", function () {
 
   }
 
+  /* ================= COUNTER ANIMATION ================= */
+
+const counters = document.querySelectorAll(".counter");
+
+if (counters.length > 0) {
+
+  counters.forEach(counter => {
+
+    const target = parseInt(counter.getAttribute("data-target")) || 
+                   parseInt(counter.getAttribute("data-count"));
+
+    if (!target) return;
+
+    let current = 0;
+    const duration = 1500;
+    const steps = 60;
+    const increment = target / steps;
+    const stepTime = duration / steps;
+
+    const timer = setInterval(() => {
+      current += increment;
+
+      if (current >= target) {
+        counter.textContent = target;
+        clearInterval(timer);
+      } else {
+        counter.textContent = Math.ceil(current);
+      }
+
+    }, stepTime);
+
+  });
+
+}
   /* ================= SWIPER ================= */
 
   if (typeof Swiper !== "undefined" && document.querySelector(".latestSwiper")) {
