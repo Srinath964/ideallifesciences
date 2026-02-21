@@ -64,13 +64,24 @@
 .footer-section a:hover {
   text-decoration: underline;
 }
+.contact-email {
+  display: flex;
+  align-items: center;
+  gap: 8px;   /* space between icon and email */
+}
+
 .email-icon {
+  width: 18px;
+  height: 18px;
+  filter: brightness(0) invert(1);
+}
+/* .email-icon {
   width: 20px;
   height: 20px;
   vertical-align: middle;
   margin-right: 8px;
   filter: brightness(0) invert(1);
-}
+} */
 /* Social Icons Row */
 .footer-social {
   margin: 30px auto 10px;

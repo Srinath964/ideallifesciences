@@ -30,49 +30,17 @@
 
 <style>
 /* Hero Section */
-
-/* Hero Section - Desktop & Tablet */
-/* Hero Section */
 .product-hero {
-  margin-top: 140px; /* header + topbar offset */
-  width: 100%;
-  line-height: 0; /* removes gap under inline img */
-}
-
-.product-hero img {
-  width: 100%;
-  height: 55vw;
-  min-height: 200px;
-  max-height: 420px;
-  object-fit: cover;
-  object-position: top center;
-  display: block;
-}
-
-/* Tablet */
-@media (max-width: 768px) {
-  .product-hero {
-    margin-top: 140px;
-  }
-
-  .product-hero img {
-      width: 100%;
-    height: 220px;        /* fixed height so full image shows */
-    object-fit: cover;
-    object-position: top center;
-    display: block;
-  }
-}
-
-/* Small mobile */
-@media (max-width: 480px) {
-  .product-hero {
-    margin-top: 140px;
-  }
-
-  .product-hero img {
-      height: 220px;
-  }
+  min-height: 400px;
+  height: 155vh; /* 50% of viewport height for responsiveness */
+  background: 
+  /* linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), */
+              url("./images/hero section/Regalia-1.webp") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
 }
 
 .hero-content {
@@ -100,9 +68,17 @@
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
- body{
-    padding-top: 110px; /* adjust exact header height */
-  }
+  body{
+    margin-top: 155px;
+  } 
+    .product-hero {
+      min-height: 300px;
+      height: 40vh;
+      padding: 30px 15px;
+      background-size: cover;
+    background-position: center;
+ }
+  
   
  .hero-content{
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -119,8 +95,9 @@
 /* Extra Small Mobile */
 @media (max-width: 480px) {
 
-  body{
-    padding-top: 110px; /* adjust exact header height */
+ .product-hero {
+    min-height: 250px;
+    height: 35vh;
   }
   
   .hero-content h1 {
@@ -316,7 +293,7 @@
  
      <!-- Hero Section -->
 <section class="product-hero">
-  <img src="./images/hero section/Regalia_Slide_hs1.webp" alt="">
+  <!-- <img src="./images/hero section/Regalia_Slide_hs1.webp" alt=""> -->
 </section>
 
 
@@ -743,7 +720,7 @@
       </div>
 
       <div class="swiper-slide">
-        <img src="./images/PRODUCTS/Ourlatestproducts/safepram.webp" alt="Safepram" loading="lazy">
+        <img src="./images/PRODUCTS/Ourlatestproducts/Safepram.webp" alt="Safepram" loading="lazy">
       </div>
 
       <div class="swiper-slide">
