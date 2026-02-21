@@ -35,6 +35,11 @@
       color: var(--text-color);
       overflow-x: hidden;
   }
+  
+  section {
+  will-change: transform;
+  transform: translateZ(0);
+  }
 
   /* Top bar */
 
@@ -1274,10 +1279,11 @@ h2 {
   /* Style the nav container */
   .mainNav {
     width: 100%;
-    background: #ffffffcc; /* semi-white background */
+    /* background: #ffffffcc; semi-white background */
+    background: rgba(255,255,255,0.95);
     z-index: 1000;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    backdrop-filter: blur(6px);
+    /* backdrop-filter: blur(6px); */
   }
 
   /* Remove default UL styles */
