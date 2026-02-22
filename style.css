@@ -573,11 +573,12 @@
 
 
   /* Mobile header offset */
-  @media (max-width: 768px) {
+  /* @media (max-width: 768px) {
     section:first-of-type {
-      margin-top: 0; /* Carousel already has margin-top */
-    }
-  }
+      /* margin-top: 0; */
+       /* Carousel already has margin-top */
+    /* }
+  } */ 
 
 
   /* ============================
@@ -1319,9 +1320,7 @@ h2 {
     color: #555;
   }
   @media (max-width: 768px) {
-       body{
-    margin-top: 120px;
-  } 
+
     .hero{
       padding: 140px 0 100px;
     }
