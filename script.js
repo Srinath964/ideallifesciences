@@ -132,6 +132,7 @@ if (counters.length > 0) {
   });
 
 }
+
   /* ================= SWIPER ================= */
 
   if (typeof Swiper !== "undefined" && document.querySelector(".latestSwiper")) {
