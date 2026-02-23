@@ -569,6 +569,11 @@
       }
   }
 
+  .carousel,
+.division-container,
+.news-cards {
+  transform: translateZ(0);
+}
   /* END OF NEW CAROUSEL STYLES */
 
 
@@ -790,9 +795,12 @@
       .division-card img {
         width: 100%;
         height: 180px;
-        object-fit: cover;
+        /* object-fit: cover; */
         border-radius: 10px;
         margin-bottom: 15px;
+          width: 100%;
+  aspect-ratio: 1 / 1;   /* Prevents jumping */
+  object-fit: contain;
       }
 
       .division-card h3 {
