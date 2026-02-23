@@ -365,7 +365,7 @@
  /* linear-gradient(135deg, rgba(0, 178, 169, 0.9) 0%, rgba(0, 128, 128, 0.9) 100%), */
   .slide-4 {
       background:
-                  url('./images/carousel section/hridaya\ final\ pb.webp');
+                  url('./images/carousel section/hridaya final pb.webp');
                    background-size: cover;
       background-position: center;
   }
@@ -547,12 +547,24 @@
 
         background:
         /* linear-gradient(135deg, rgba(0, 158, 158, 0.9) 0%, rgba(0, 110, 110, 0.9) 100%), */
-        url('./images/carousel section/Regalia_Slide_hs.webp');
+        url('./images/carousel section/Regalia_ms1.webp');
         background-size: cover;
         background-position: center;
   }
-    .slide-1 .slide-content {
+     .slide-1 .slide-content {
     color: teal;
+  }
+     .slide-4{
+
+        background:
+        /* linear-gradient(135deg, rgba(0, 158, 158, 0.9) 0%, rgba(0, 110, 110, 0.9) 100%), */
+        url('./images/carousel section/hridaya_ms4.webp');
+        background-size: cover;
+        background-position: center;
+  }
+ 
+  .slide-4 .slide-content{
+    color: #FF2E2E;
   }
       .arrow {
           width: 45px;
