@@ -29,13 +29,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 
 <style>
+body{
+    margin-top: 120px;
+  } 
 /* Hero Section */
 .product-hero {
   min-height: 400px;
   height: 155vh; /* 50% of viewport height for responsiveness */
   background: 
   /* linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), */
-              url("./images/hero section/Regalia-1.webp") center/cover no-repeat;
+              url("./images/conference/ideal group.webp") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -110,14 +113,34 @@
 }
 
 /* Product Section */
+
 .products {
   padding: 60px 8%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 30px;
   background: #f9f9f9;
 }
 
+/* Mobile */
+@media (max-width: 576px) {
+  .products {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tablet */
+@media (min-width: 577px) and (max-width: 991px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+  .products {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 /* Product Card */
 /* .product-card {
   background: #fff;
@@ -131,7 +154,6 @@
 .product-card:hover {
   transform: translateY(-5px);
 } */
- 
 .product-card {
   background: #fff;
   border-radius: 12px;
@@ -291,23 +313,26 @@
         </nav>
     </header>
 
- 
-     <!-- Hero Section -->
-<section class="product-hero">
-  <!-- <img src="./images/hero section/Regalia_Slide_hs1.webp" alt=""> -->
-</section>
+            <!-- Hero Section -->
+    <section class="product-hero">
+    
+    </section>
+
+    <div class="hero-content">
+         <h1>Gallery</h1>
+    </div> 
 
 
  <div class="mainNav">
       <ul class="nav-links-about">
         <li><a href="index.html" data-nav="home">Home</a></li>
-        <li><a href="regalia.html" data-nav="regalia">Regalia</a></li>
+        <li><a href="gallery.html" data-nav="gallery">Gallery</a></li>
       </ul>
     </div>
     
       <script>
   (function () {
-    const page = document.body.classList.contains('regalia') ? 'regalia' : 'home';
+    const page = document.body.classList.contains('gallery') ? 'gallery' : 'home';
     document.querySelectorAll('[data-nav]').forEach(a => {
       if (a.getAttribute('data-nav') === page) {
         a.classList.add('active');
@@ -316,360 +341,112 @@
   })();
 </script>
 
-<div class="hero-content">
-  <h1>Our Products</h1>
-  <p>Quality Medicines for a Better Life</p>
-</div>
+
 
 <!-- Product Grid -->
 <section class="products">
-  <!-- <div class="product-card">
+
+  
+  <div class="product-card">
     <div class="img-box">
-      <img src="./images/PNG/1.png" alt="Product 1">
+      <img src="./images/conference/Yuva 2025 (2).webp" alt="">
+    </div>
+
+    <h3 class="product-name">YUVA 2025</h3>
+    <p class="product-molecule">FOGSI SOUTH ZONAL CONFERENCE</p>
+    <p class="product-molecule">20th - 22th JUNE</p>
+  </div>
+
+     <div class="product-card">
+    <div class="img-box">
+      <img src="./images/conference/Yuva 2025.webp" alt="">
+    </div>
+
+    <h3 class="product-name">YUVA 2025</h3>
+    <p class="product-molecule">FOGSI SOUTH ZONAL CONFERENCE</p>
+    <p class="product-molecule">20th - 22th JUNE</p>
+  </div>
+
+  <div class="product-card">
+    <div class="img-box">
+      <img src="./images/conference/Aruvi 2025 (1).webp" alt="2">
+    </div>
+
+    <h3 class="product-name">Aruvi 2025</h3>
+    <p class="product-molecule">TNFOG MIDYEAR CONFERENCE DHARMAPURI</p>
+    <p class="product-molecule">DECEMBER 6th & 7th</p>
+  </div>
+
+  <div class="product-card">
+    <div class="img-box">
+      <img src="./images/conference/Aruvi 2025 (3).webp" alt="1">
+    </div>
+
+    <h3 class="product-name">Aruvi 2025</h3>
+    <p class="product-molecule">TNFOG MIDYEAR CONFERENCE DHARMAPURI</p>
+    <p class="product-molecule">DECEMBER 6th & 7th</p>
+  </div>
+
+
+  <div class="product-card">
+    <div class="img-box">
+      <img src="./images/conference/Aruvi 2025 (2).webp" alt="3">
+    </div>
+
+    <h3 class="product-name">Aruvi 2025</h3>
+    <p class="product-molecule">TNFOG MIDYEAR CONFERENCE DHARMAPURI</p>
+    <p class="product-molecule">DECEMBER 6th & 7th</p>
+  </div>
+
+
+   <div class="product-card">
+    <div class="img-box">
+      <img src="./images/conference/Aruvi 2025 (5).webp" alt="5">
+    </div>
+
+    <h3 class="product-name">Aruvi 2025</h3>
+    <p class="product-molecule">TNFOG MIDYEAR CONFERENCE DHARMAPURI</p>
+    <p class="product-molecule">DECEMBER 6th & 7th</p>
+  </div>
+
+  <div class="product-card">
+    <div class="img-box">
+      <img src="./images/conference/Kongu pedicon.webp" alt="6">
+    </div>
+
+    <h3 class="product-name">KONGU PEDICON</h3>
+    <p class="product-molecule">49th ANNUAL STATE CONFERENCE OF IAP - TNSC</p>
+  </div>
+
+  <div class="product-card">
+    <div class="img-box">
+      <img src="./images/conference/WhatsApp (4).webp" alt="">
     </div>
 
     <h3 class="product-name">Product Name 3</h3>
     <p class="product-molecule">Molecule: Paracetamol 650 mg</p>
-  </div> -->
-
-
-  <div class="product-card">
-    <div class="img-box">
-      <img src="./images/PNG/Regalia/1.webp" alt="ambutril 60ml" loading="lazy">
-    </div>
-    <h3>Ambutril 60ml</h3>
-    <p></p>
   </div>
 
   <div class="product-card">
     <div class="img-box">
-      <img src="./images/PNG/Regalia/2.webp" alt="ambutril 100ml" loading="lazy">
+      <img src="./images/conference/ideal group.webp" alt="">
     </div>
-    <h3>Ambutril 100ml</h3>
-  </div>
-<!-- 
-  <div class="product-card">
-    <div class="img-box">
-      <img src="./images/PNG/Regalia/3.webp" alt="ambutril Dx 60ml" loading="lazy">
-    </div>
-    <h3>Ambutril Dx 60ml</h3>
+
+    <h3 class="product-name">YUVA 2025</h3>
+    <p class="product-molecule">FOGSI SOUTH ZONAL CONFERENCE</p>
+    <p class="product-molecule">20th - 22th JUNE</p>
   </div>
 
-  <div class="product-card">
-    <div class="img-box">
-      <img src="./images/PNG/Regalia/4.webp" alt="ambutril Dx 100ml" loading="lazy">
-    </div>
-    <h3>Ambutril Dx 100ml</h3>
-  </div> -->
-
-   <div class="product-card">
-    <div class="img-box">
-      <img src="./images/PNG/Regalia/5.webp" alt="Bactopod 100" loading="lazy">
-    </div>
-    <h3>Bactopod 100 Tab</h3>
-  </div>
-
-  <div class="product-card">
-      <div class="img-box">
-        <img src="./images/PNG/Regalia/6.webp" alt="Bactopod 200 Tab" loading="lazy">
-      </div>
-      <h3>Bactopod 200 Tab</h3>
-  </div>
-
-  <div class="product-card">
-    <div class="img-box">
-      <img src="./images/PNG/Regalia/7.webp" alt="Bactopod CV 200 Tab  " loading="lazy">
-    </div>
-    <h3>Bactopod CV 200 Tab</h3>
-  </div>
-
-  <div class="product-card">
-    <div class="img-box">
-      <img src="./images/PNG/Regalia/8.webp" alt="Bactopod 50 Ds" loading="lazy">
-    </div>
-    <h3>Bactopod 50 Ds</h3>
-  </div>
-
-   <div class="product-card">
-    <div class="img-box">
-      <img src="./images/PNG/Regalia/9.webp" alt="Bactopod 100 Ds" loading="lazy">
-    </div>
-    <h3>Bactopod 100 Ds</h3>
-  </div>
-
-  <div class="product-card">
-    <div class="img-box">
-      <img src="./images/PNG/Regalia/10.webp" alt="Bc plus tab" loading="lazy">
-    </div>
-    <h3>Bc Plus Tab</h3>
-  </div>
-<!-- 
-  <div class="product-card">
-    <div class="img-box">
-      <img src="./images/PNG/Regalia/11.webp" alt="Bc plus Drops" loading="lazy">
-    </div>
-    <h3>Bc Plus Drops</h3>
-  </div> -->
-
-  <div class="product-card">
-    <div class="img-box">
-      <img src="./images/PNG/Regalia/12.webp" alt="Bc plus syp" loading="lazy">
-    </div>
-    <h3>Bc Plus Syp</h3>
-  </div>
-
-    <div class="product-card">
-    <div class="img-box">
-      <img src="./images/PNG/Regalia/13.webp" alt="Bc plus Syrup" loading="lazy">
-    </div>
-    <h3>Bilactum Inj</h3>
-  </div>
-
-  <div class="product-card">
-    <div class="img-box">
-      <img src="./images/PNG/Regalia/14.webp" alt="Ca-fast" loading="lazy">
-    </div>
-    <h3>Ca-fast</h3>
-  </div>
-
-  <div class="product-card">
-    <div class="img-box">
-      <img src="./images/PNG/Regalia/15.webp" alt="DRIVEBACT-228.8 KID TAB" loading="lazy">
-    </div>
-    <h3>Drivebact-228.8 KID TAB</h3>
-  </div>
-
-  <div class="product-card">
-    <div class="img-box">
-      <img src="./images/PNG/Regalia/16.webp" alt="DRIVEBACT-625MG TAB" loading="lazy">
-    </div>
-    <h3>Drivebact-625MG TAB</h3>
-  </div>
-
-  <div class="product-card">
-    <div class="img-box">
-      <img src="./images/PNG/Regalia/17.webp" alt="DRIVEBACT-457 30ml" loading="lazy">
-    </div>
-    <h3>Drivebact-457 30ml</h3>
-  </div>
-
-  <div class="product-card">
-    <div class="img-box">
-      <img src="./images/PNG/Regalia/18.webp" alt="DRIVEBACT-457 60ml" loading="lazy">
-    </div>
-    <h3>Drivebact-457 60ml</h3>
-  </div>
-
-  <div class="product-card">
-    <div class="img-box">
-      <img src="./images/PNG/Regalia/DV3 DROPS.webp" alt="DV3 DROPS" loading="lazy">
-    </div>
-    <h3>DV3 Drops</h3>
-  </div>
-
-  <div class="product-card">
-    <div class="img-box">
-      <img src="./images/PNG/Regalia/FRENOS.webp" alt="FRENOS" loading="lazy">
-    </div>
-    <h3>Frenos</h3>
-  </div>
-
-  <div class="product-card">
-    <div class="img-box">
-      <img src="./images/PNG/Regalia/FRENOS INHALANT CAPSULES.webp" alt="FRENOS INHALANT CAPSULES" loading="lazy">
-    </div>
-    <h3>Frenos Inhalant Capsules</h3>
-  </div>
-
-  <div class="product-card">
-    <div class="img-box">
-      <img src="./images/PNG/Regalia/GUSTOGEM SUSP.webp" alt="GUSTOGEM SUSP" loading="lazy">
-    </div>
-    <h3>Gustogem Susp 6*2*5ML</h3>
-  </div>
-  
-  <div class="product-card">
-      <div class="img-box">
-        <img src="./images/PNG/Regalia/Ideaz 250Mg Tab.webp" alt="Ideaz 250Mg Tab" loading="lazy">
-      </div>
-      <h3>Ideaz 250Mg Tab</h3>
-  </div>
   
     <div class="product-card">
-      <div class="img-box">
-        <img src="./images/PNG/Regalia/Ideaz 500Mg Tab.webp" alt="Ideaz 500Mg Tab" loading="lazy">
-      </div>
-      <h3>Ideaz 500Mg Tab</h3>
+    <div class="img-box">
+      <img src="./images/conference/Aruvi 2025 (4).webp" alt="4">
+    </div>
+
+    <h3 class="product-name">Product Name 3</h3>
+    <p class="product-molecule">Molecule: Paracetamol 650 mg</p>
   </div>
   
-  <div class="product-card">
-      <div class="img-box">
-        <img src="./images/PNG/Regalia/Idecet Syp.webp" alt="Idecet Syp" loading="lazy">
-      </div>
-      <h3>Idecet Syp</h3>
-  </div>
-
-  <div class="product-card">
-      <div class="img-box">
-        <img src="./images/PNG/Regalia/Idecet Ax Tab.webp" alt="Idecet Ax Tab" loading="lazy">
-      </div>
-      <h3>Idecet Ax Tab</h3>
-  </div>
-
-  <div class="product-card">
-      <div class="img-box">
-        <img src="./images/PNG/Regalia/Idecet-Ax Suspension.webp" alt="Idecet Ax Suspension" loading="lazy">
-      </div>
-      <h3>Idecet Ax Suspension</h3>
-  </div>
-
-  <div class="product-card">
-      <div class="img-box">
-        <img src="./images/PNG/Regalia/Idecet-Lm Kidtab.webp" alt="Idecet Lm Kidtab" loading="lazy">
-      </div>
-      <h3>Idecet Lm Kidtab</h3>
-  </div>
-
-  <div class="product-card">
-      <div class="img-box">
-        <img src="./images/PNG/Regalia/Idecet-Lm Tab.webp" alt="Idecet Lm Tab" loading="lazy">
-      </div>
-      <h3>Idecet Lm Tab</h3>
-  </div>
-
-  <div class="product-card">
-      <div class="img-box">
-        <img src="./images/PNG/Regalia/Idefen Tab.webp" alt="Idefen Tab" loading="lazy">
-      </div>
-      <h3>Idefen Tab</h3>
-  </div>
-  
-  <div class="product-card">
-      <div class="img-box">
-        <img src="./images/PNG/Regalia/Idefen Gel.webp" alt="Idefen Gel" loading="lazy">
-      </div>
-      <h3>Idefen Gel</h3>
-  </div>
-
-    <div class="product-card">
-      <div class="img-box">
-        <img src="./images/PNG/Regalia/Idefer Xt Tab.webp" alt="Idefer Xt Tab">
-      </div>
-      <h3>Idefer Xt Tab</h3>
-  </div>
-  
-    <div class="product-card">
-      <div class="img-box">
-        <img src="./images/PNG/Regalia/Idefer-Xt Drops.webp" alt="Idefen Xt Drops" loading="lazy">
-      </div>
-      <h3>Idefen Xt Drops</h3>
-  </div>
-  
-  <div class="product-card">
-      <div class="img-box">
-        <img src="./images/PNG/Regalia/Idefer Xt Suspension.webp" alt="Idefen Xt Suspension" loading="lazy">
-      </div>
-      <h3>Idefen Xt Suspension</h3>
-  </div>
-
-   <div class="product-card">
-      <div class="img-box">
-        <img src="./images/PNG/Regalia/Idemol 650G Tab.webp" alt="Idemol 650G Tab" loading="lazy">
-      </div>
-      <h3>Idemol 650G Tab</h3>
-  </div>
-  
-   <div class="product-card">
-      <div class="img-box">
-        <img src="./images/PNG/Regalia/Idemol Drops.webp" alt="Idemol Drops" loading="lazy">
-      </div>
-      <h3>Idemol Drops</h3>
-  </div>
-
-   <div class="product-card">
-      <div class="img-box">
-        <img src="./images/PNG/Regalia/Idemol-120Mg Susp.webp" alt="Idemol 120Mg Suspension" loading="lazy">
-      </div>
-      <h3>Idemol 120Mg Suspension</h3>
-  </div>
-
-   <div class="product-card">
-      <div class="img-box">
-        <img src="./images/PNG/Regalia/Idemol-250Mg Susp.webp" alt="Idemol 250Mg Suspension" loading="lazy">
-      </div>
-      <h3>Idemol 250Mg Suspension</h3>
-  </div>
-
-   <div class="product-card">
-      <div class="img-box">
-        <img src="./images/PNG/Regalia/Idemol-500Mg Susp.webp" alt="Idemol 500Mg Suspension" loading="lazy">
-      </div>
-      <h3>Idemol 500Mg Suspension</h3>
-  </div>
-
-    <div class="product-card">
-      <div class="img-box">
-        <img src="./images/PNG/Regalia/Iderab 20Mg Tab.webp" alt="Iderab 20Mg Tab" loading="lazy">
-      </div>
-      <h3>Iderab 20Mg Tab</h3>
-  </div>
-
-  <div class="product-card">
-      <div class="img-box">
-        <img src="./images/PNG/Regalia/Iderab Plus Tab.webp" alt="Iderab Plus Tab" loading="lazy">
-      </div>
-      <h3>Iderab Plus Tab</h3>
-  </div>
-
-  <div class="product-card">
-      <div class="img-box">
-        <img src="./images/PNG/Regalia/Myocam Tab.webp" alt="Myocam Tab" loading="lazy">
-      </div>
-      <h3>Myocam Tab</h3>
-  </div>
-  
-  <div class="product-card">
-      <div class="img-box">
-        <img src="./images/PNG/Regalia/Pregamec Tab.webp" alt="Pregamec Tab" loading="lazy">
-      </div>
-      <h3>Pregamec Tab</h3>
-  </div>
-
-  <div class="product-card">
-      <div class="img-box">
-        <img src="./images/PNG/Regalia/Sregest 100 Mg Tab.webp" alt="Sregest 100 Mg Tab" loading="lazy  ">
-      </div>
-      <h3>Sregest 100 Mg Tab</h3>
-  </div>
-
-  <div class="product-card">
-      <div class="img-box">
-        <img src="./images/PNG/Regalia/Sregest 200 Mg Tab.webp" alt="Sregest 200 Mg Tab" loading="lazy">
-      </div>
-      <h3>Sregest 200 Mg Tab</h3>
-  </div>
-
-  <!-- <div class="product-card">
-      <div class="img-box">
-        <img src="./images/PNG/Regalia/Sregest 300 Mg Tab.webp" alt="Sregest 300 Mg Tab" loading="lazy">
-      </div>
-      <h3>Sregest 300 Mg Tab</h3>
-  </div>
-
-  <div class="product-card">
-      <div class="img-box">
-        <img src="./images/PNG/Regalia/Sregest 400 Mg Tab.webp" alt="Sregest 400 Mg Tab" loading="lazy">
-      </div>
-      <h3>Sregest 400 Mg Tab</h3>
-  </div> -->
-
-  <div class="product-card">
-      <div class="img-box">
-        <img src="./images/PNG/Regalia/U Setron.webp" alt="U Setron" loading="lazy">
-      </div>
-      <h3>U Setron</h3>
-  </div>
-
 </section>
 
 
