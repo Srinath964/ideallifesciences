@@ -702,8 +702,14 @@
         margin-bottom: 16px;
       font-size: 1.1rem;
       text-align: justify;
-  }
-
+    }
+    
+    .ideal-fl{
+      text-indent: 60px;
+        margin-bottom: 16px;
+          font-size: 1.1rem;
+          text-align: justify;
+   }
   /* About us section */
     .aboutus{
       text-align: left;
@@ -1106,11 +1112,11 @@ h2 {
 
   .news-section {
         position: relative;
-        padding: 40px 20px;
+        padding: 80px 20px;
         text-align: center;
         background: url('./images/N&U.webp') center/cover no-repeat;
         color: white; /* text color for contrast */
-        height: 550px;
+        /* height: 550px; */
       }
 
       /* Overlay */
@@ -1154,11 +1160,12 @@ h2 {
         transform: translateY(-5px);
       }
 
-      .news-card img {
-        width: 100%;
-        /* height: 200px; */
-        object-fit: cover;
-      }
+    .news-card img {
+      width: 100%;
+      height: 200px;       /* fixed height */
+      object-fit: cover;   /* prevents distortion */
+      display: block;
+    }
 
       .news-card h3 {
         font-size: 1.2rem;
